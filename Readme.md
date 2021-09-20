@@ -1,1 +1,1 @@
-Для запуска python manage.py runserver
+Для запуска: python manage.py runserver

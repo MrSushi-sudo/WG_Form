@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<form method="POST" enctype="multipart/form-data">
+    {{ form.as_p }}
+    <a id="knopka_1" class="knopka_1" onclick="document.getElementById('id_file').click()">Выберите файл</a>
+    <a id="knopka_2" class="knopka_2" onclick="document.getElementById('form_submit').click()">Отправить</a>
+    {% csrf_token %}
+    <input class="form_submit" id="form_submit" type="submit" value="Submit">
+</form>

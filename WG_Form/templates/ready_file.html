@@ -1,0 +1,15 @@
+{% load static wg_tags %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<table>
+<th>Слова</th>
+<th>tf</th>
+<th>idf</th>
+<th class="th_style" onclick="location.href = '/'">Вернуться на страницу загрузки файла</th>
+{% for word, count in tf.items %}
+<tr>
+    <th>{{ word }}</th>
+    <td>{{ count }}</td>
+    <td>{{ idf|get_item:word }}</td>
+</tr>
+{% endfor %}
+</table>
